@@ -39,8 +39,8 @@ ADDRESSES = {
             "Plasma Coil": {"unlockAddress": 0x00142CB0, "id": 16, "ammoAddress": 0x00142830, "lv1Ammo": 15, },
         },
         "Gadgets": {
-            # "Heli-Pack": {"unlockAddress": 0x00142CA2, "id": 0, },
-            # "Thruster-Pack": {"unlockAddress": 0x00142CA3, "id": 0, },
+            "Heli-Pack": {"unlockAddress": 0x00142CA2, "id": 0, },
+            "Thruster-Pack": {"unlockAddress": 0x00142CA3, "id": 0, },
             "Hacker": {"unlockAddress": 0x00142CB4, "id": 0, },
             "Hypershot": {"unlockAddress": 0x00142CAB, "id": 11, },
             "Refractor": {"unlockAddress": 0x00142CB2, "id": 18, },
@@ -117,6 +117,16 @@ ADDRESSES = {
             0x001D4C90, 0x001D4C94, 0x001D4C98, 0x001D4C9C,
         ],
         "MainMenu": 0x0016C598,
+        "XCoord": 0x001A4C60,
+        "YCoord": 0x001A4C64,
+        "ZCoord": 0x001A4C68,                
+        "XCoordRespawn": 0x002348D0,
+        "YCoordRespawn": 0x002348D4,
+        "ZCoordRespawn": 0x002348D8,
+        "RotationRespawn": 0x002348E8,
+        "RatchetCurrentColor": 0x01C8E3BC,
+        "RatchetSize": 0x01C8E3AC,
+        "RatchetTransparency": 0x01C8E3A0,
         "CurrentEquipped": 0x001D4C40,
         "HoldingWeapon": 0x001A5E08,
         "LastUsed": [0x00142670, 0x00142674, 0x00142678],
@@ -133,6 +143,7 @@ ADDRESSES = {
         "CurrentPlanet": 0x001D545C,
         "SewerCrystalsInPossession": 0x001426A2,
         "Robonoids active": 0x0014275C,
+        "MonkeyHitCounter": 0x01D3C828,
         "Skill Points": {
             "Go for hang time": 0x001D54B0,
             "Stay Squeaky Clean": 0x001D54B1,
@@ -203,8 +214,19 @@ ADDRESSES = {
         },
         "Enemies": {
             "First of two noids - Mylon Landing Point": 0x001C169E,
-            "Second of two noids - Mylon Landing Point": 0x001C16F4
-        }
+            "Second of two noids - Mylon Landing Point": 0x001C16F4,
+            "Mechanoid after Blaster - Veldin": 0x001BC2C2,
+        },
+        "Crystals": {
+            "Crystal - First sector, first way": 0x001C2EC4,
+            "Crystal - First sector, second way - King Ameboid": 0x001C2E9B,
+            "Crystal - First sector, second way": 0x001C2EC3,
+        },
+        "Crates": {
+            "Nanotech Crate - 1": 0x001BC3B5,
+        },
+        "Checkpoints": {
+        },
     }
 }
 
