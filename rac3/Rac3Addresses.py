@@ -119,14 +119,9 @@ ADDRESSES = {
         "MainMenu": 0x0016C598,
         "XCoord": 0x001A4C60,
         "YCoord": 0x001A4C64,
-        "ZCoord": 0x001A4C68,                
-        "XCoordRespawn": 0x002348D0,
-        "YCoordRespawn": 0x002348D4,
-        "ZCoordRespawn": 0x002348D8,
-        "RotationRespawn": 0x002348E8,
-        "RatchetCurrentColor": 0x01C8E3BC,
-        "RatchetSize": 0x01C8E3AC,
-        "RatchetTransparency": 0x01C8E3A0,
+        "ZCoord": 0x001A4C68,
+        "Rotation": 0x001A4C78,
+        "ArmorLights": 0x001A73F0,                
         "CurrentEquipped": 0x001D4C40,
         "HoldingWeapon": 0x001A5E08,
         "LastUsed": [0x00142670, 0x00142674, 0x00142678],
@@ -213,20 +208,126 @@ ADDRESSES = {
             "Tyhrranosis: Destroy the Momma Tyhrranoid": 0x0014271D,
         },
         "Enemies": {
-            "First of two noids - Mylon Landing Point": 0x001C169E,
-            "Second of two noids - Mylon Landing Point": 0x001C16F4,
+            "First of two noids - Command Center": 0x001C169E,
+            "Second of two noids - Command Center": 0x001C16F4,
             "Mechanoid after Blaster - Veldin": 0x001BC2C2,
         },
         "Crystals": {
-            "Crystal - First sector, first way": 0x001C2EC4,
-            "Crystal - First sector, second way - King Ameboid": 0x001C2E9B,
-            "Crystal - First sector, second way": 0x001C2EC3,
+            "Crystal Rock - First sector, first way": 0x001C2EC4,
+            "King Ameboid - First sector, second way": 0x001C2E9B,
+            "Crystal Rock - First sector, second way": 0x001C2EC3,
         },
         "Crates": {
-            "Nanotech Crate - 1": 0x001BC3B5,
+            "Nanotech Crate 01 - Veldin": 0x001BC3B5,
         },
-        "Checkpoints": {
-        },
+        "PlanetSpecific": {
+            "Florana": {
+                "Respawn": {
+                    "FirstCheckpoint": {
+                    "XCoord": 480.476,
+                    "YCoord": 587.246,
+                    "ZCoord": 315.212,
+                    "Rotation": -0.79
+                    },
+                    "SecondCheckpoint": {
+                    "XCoord": 557.119,
+                    "YCoord": 484.080,
+                    "ZCoord": 334.734,
+                    "Rotation": -3.14
+                    },
+                    "ThirdCheckpoint": {
+                    "XCoord": 421.986,
+                    "YCoord": 572.106,
+                    "ZCoord": 314.953,
+                    "Rotation": 2.44
+                    },
+                    "FourthCheckpoint": {
+                    "XCoord": 171.786,
+                    "YCoord": 223.026,
+                    "ZCoord": 29.980,
+                    "Rotation": 2.37
+                    },
+                    "FinalCheckpoint": {
+                    "XCoord": 219.126,
+                    "YCoord": 209.825,
+                    "ZCoord": 44.963,
+                    "Rotation": -2.37
+                    },
+                    "Addresses": {
+                    "XCoord": 0x002348D0,
+                    "YCoord": 0x002348D4,
+                    "ZCoord": 0x002348D8,
+                    "Rotation": 0x002348E8,
+                    "Color": 0x002348F4,
+                    "Brightness": 0x00234904
+                    }
+                },
+
+                "Ratchet": {
+                    "Transparency": 0x01C8E3A0,
+                    "Size": 0x01C8E3AC,
+                    "Shell": 0x01C8E3B4,
+                    "Contrast": 0x01C8E3B5,
+                    "Color": 0x01C8E3BC
+                    # "Aura": 0x01C8E3BC
+                }
+            },
+            "Phoenix": {
+                "Respawn": {
+                    "FirstCheckpoint": {
+                    "XCoord": 480.476,
+                    "YCoord": 587.246,
+                    "ZCoord": 315.212,
+                    "Rotation": -0.79
+                    },
+                    "Addresses": {
+                    "XCoord": 0x00,
+                    "YCoord": 0x00,
+                    "ZCoord": 0x00,
+                    "Rotation": 0x00,
+                    "Color": 0x9,
+                    "Brightness": 0x0
+                    }
+                },
+
+                "Ratchet": {
+                    "Transparency": 0x0,
+                    "Size": 0x0,
+                    "Shell": 0x0,
+                    "Contrast": 0x0,
+                    "Color": 0x0
+                    # "Aura": 0x01C8E3BC
+                }                
+
+            },
+            "Marcadia": {
+                "Respawn": {
+                    "FirstCheckpoint": {
+                    "XCoord": 480.476,
+                    "YCoord": 587.246,
+                    "ZCoord": 315.212,
+                    "Rotation": -0.79
+                    },
+                    "Addresses": {
+                    "XCoord": 0x00,
+                    "YCoord": 0x00,
+                    "ZCoord": 0x00,
+                    "Rotation": 0x00,
+                    "Color": 0x00,
+                    "Brightness": 0x00
+                    }
+                },
+
+                "Ratchet": {
+                    "Transparency": 0x0,
+                    "Size": 0x0,
+                    "Shell": 0x0,
+                    "Contrast": 0x0,
+                    "Color": 0x0
+                    # "Aura": 0x01C8E3BC
+                }
+            }
+        }
     }
 }
 
@@ -2412,18 +2513,17 @@ LOCATIONS = [
     {
         "Name": "Nanotech Level Up - 11",
         "Id": 50250011,
-        "Checks": [
-            {
-                "Address": "0x001A4E18",
-                "CheckType": 0,
-                "AddressBit": 0
-            },
-            {
-                "Address": "0x001A7430",
-                "CompareType": 0,
-                "CheckType": 1,
-                "CheckValue": "11"
-            }
-        ]
+        "Address": "0x00142694",
+        "CompareType": 1,
+        "CheckType": 1,
+        "CheckValue": "4799"
+    },
+        {
+        "Name": "Nanotech Level Up - 12",
+        "Id": 50250012,
+        "Address": "0x00142694",
+        "CompareType": 1,
+        "CheckType": 1,
+        "CheckValue": "9599"
     },
 ]
