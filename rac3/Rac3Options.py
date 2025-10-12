@@ -108,6 +108,18 @@ class Trophies(Choice):
     option_every_trophy = 2
     default = 1
 
+class TitaniumBolts(Choice):
+    """
+    Determines whether titanium bolts are locations in the world.
+    Off: No titanium bolts are locations.
+    On: All titanium bolts are locations.
+    """
+    display_name = "Titanium Bolts"
+    option_off = 0
+    option_on = 1
+    default = 0
+
+
 
 @dataclass
 class RaC3Options(PerGameCommonOptions):
@@ -118,11 +130,12 @@ class RaC3Options(PerGameCommonOptions):
     extra_armor_upgrade: ExtraArmorUpgrade
     skill_points: SkillPoints
     trophies: Trophies
+    titanium_bolts: TitaniumBolts
 
 
 rac3_option_groups: Dict[str, List[Any]] = {
     "General Options": [StartInventoryPool, StartingWeapons, BoltAndXPMultiplier, EnableWeaponLevelAsItem,
-                        ExtraArmorUpgrade, SkillPoints, Trophies]
+                        ExtraArmorUpgrade, SkillPoints, Trophies,TitaniumBolts]
 }
 
 slot_data_options: list[str] = [
@@ -133,4 +146,5 @@ slot_data_options: list[str] = [
     "extra_armor_upgrade",
     "skill_points",
     "trophies",
+    "titanium_bolts",
 ]

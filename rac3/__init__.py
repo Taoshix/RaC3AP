@@ -125,6 +125,7 @@ class RaC3World(World):
                 "extra_armor_upgrade": self.options.extra_armor_upgrade.value,
                 "skill_points": self.options.skill_points.value,
                 "trophies": self.options.trophies.value,
+                "titanium_bolts":self.options.titanium_bolts.value,
             },
             "TotalLocations": get_total_locations(self)
         }
