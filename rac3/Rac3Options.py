@@ -111,12 +111,12 @@ class Trophies(Choice):
 class TitaniumBolts(Choice):
     """
     Determines whether titanium bolts are locations in the world.
-    Off: No titanium bolts are locations.
-    On: All titanium bolts are locations.
+    Disabled: No titanium bolts are locations.
+    Enabled: All titanium bolts are locations.
     """
     display_name = "Titanium Bolts"
-    option_off = 0
-    option_on = 1
+    option_disabled = 0
+    option_enabled = 1
     default = 0
 
 
