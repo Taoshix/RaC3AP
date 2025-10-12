@@ -214,7 +214,7 @@ def should_skip_location(key: str, options) -> bool:
     if "T-Bolt" in key and options.titanium_bolts.value == 0:
         return True
     
-        # Skip nanotech milestone locations if titanium bolt option is disabled
+        # Skip nanotech milestone locations if nanotech milestones option is disabled
     if "Nanotech Milestone" in key and options.nanotech_milestones.value == 0:
         return True
 

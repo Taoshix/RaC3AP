@@ -127,7 +127,9 @@ class NanotechMilestones(Choice):
     """
     display_name = "Nanotech Milestones"
     option_disabled = 0
-    option_enabled = 1
+    option_every_5 = 1
+    option_every_10 = 2
+    option_enabled = 3
     default = 0
 
 
