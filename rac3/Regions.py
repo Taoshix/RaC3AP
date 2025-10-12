@@ -25,39 +25,14 @@ SIMPLE_SKILL_POINTS = [
     "Break the Dan"
 ]
 
-EVERY_5_NANOTECH = [
-    "Nanotech Milestone: 15",
-    "Nanotech Milestone: 20",
-    "Nanotech Milestone: 25",
-    "Nanotech Milestone: 30",
-    "Nanotech Milestone: 35",
-    "Nanotech Milestone: 40",
-    "Nanotech Milestone: 45",
-    "Nanotech Milestone: 50",
-    "Nanotech Milestone: 55",
-    "Nanotech Milestone: 60",
-    "Nanotech Milestone: 65",
-    "Nanotech Milestone: 70",
-    "Nanotech Milestone: 75",
-    "Nanotech Milestone: 80",
-    "Nanotech Milestone: 85",
-    "Nanotech Milestone: 90",
-    "Nanotech Milestone: 95",
-    "Nanotech Milestone: 100"
-]
+#Making an array with every 5 nanotech
+every_5_nanotech = [f"Nanotech Milestone: {x}" for x in range(15,101,5)]
 
-EVERY_10_NANOTECH = [
-    "Nanotech Milestone: 20",
-    "Nanotech Milestone: 30",
-    "Nanotech Milestone: 40",
-    "Nanotech Milestone: 50",
-    "Nanotech Milestone: 60",
-    "Nanotech Milestone: 70",
-    "Nanotech Milestone: 80",
-    "Nanotech Milestone: 90",
-    "Nanotech Milestone: 100"
-]
+#Making an array with every 10 nanotech
+every_10_nanotech = [f"Nanotech Milestone: {x}" for x in range(20,101,10)]
 
+#Making an array with every 20 nanotech
+every_20_nanotech = [f"Nanotech Milestone: {x}" for x in range(20,101,20)]
 
 def create_regions(world: "RaC3World"):
     # ----- Introduction Sequence -----#
@@ -253,15 +228,22 @@ def should_skip_location(key: str, options) -> bool:
     
         #Skips nanotech milestones that are not in every 5
     if "Nanotech Milestone" in key and options.nanotech_milestones.value == 1:
-        for every_5 in EVERY_5_NANOTECH:
+        for every_5 in every_5_nanotech:
             if every_5.lower() in key.lower():
                 return False
         return True
     
-            #Skips nanotech milestones that are not in every 10
+        #Skips nanotech milestones that are not in every 10
     if "Nanotech Milestone" in key and options.nanotech_milestones.value == 2:
-        for every_10 in EVERY_10_NANOTECH:
+        for every_10 in every_10_nanotech:
             if every_10.lower() in key.lower():
+                return False
+        return True
+    
+        #Skips nanotech milestones that are not in every 20
+    if "Nanotech Milestone" in key and options.nanotech_milestones.value == 3:
+        for every_20 in every_20_nanotech:
+            if every_20.lower() in key.lower():
                 return False
         return True
 

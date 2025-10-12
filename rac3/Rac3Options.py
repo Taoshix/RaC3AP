@@ -129,7 +129,8 @@ class NanotechMilestones(Choice):
     option_disabled = 0
     option_every_5 = 1
     option_every_10 = 2
-    option_enabled = 3
+    option_every_20 = 3
+    option_enabled = 4
     default = 0
 
 
