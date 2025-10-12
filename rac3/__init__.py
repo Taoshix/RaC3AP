@@ -126,6 +126,7 @@ class RaC3World(World):
                 "skill_points": self.options.skill_points.value,
                 "trophies": self.options.trophies.value,
                 "titanium_bolts":self.options.titanium_bolts.value,
+                "nanotech_milestones":self.options.nanotech_milestones.value,
             },
             "TotalLocations": get_total_locations(self)
         }

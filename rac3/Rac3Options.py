@@ -119,6 +119,16 @@ class TitaniumBolts(Choice):
     option_enabled = 1
     default = 0
 
+class NanotechMilestones(Choice):
+    """
+    Determines whether nanotech milestones are locations in the world.
+    Disabled: No nanotech milestones are locations.
+    Enabled: All nanotech milestones are locations.
+    """
+    display_name = "Nanotech Milestones"
+    option_disabled = 0
+    option_enabled = 1
+    default = 0
 
 
 @dataclass
@@ -131,11 +141,12 @@ class RaC3Options(PerGameCommonOptions):
     skill_points: SkillPoints
     trophies: Trophies
     titanium_bolts: TitaniumBolts
+    nanotech_milestones: NanotechMilestones
 
 
 rac3_option_groups: Dict[str, List[Any]] = {
     "General Options": [StartInventoryPool, StartingWeapons, BoltAndXPMultiplier, EnableWeaponLevelAsItem,
-                        ExtraArmorUpgrade, SkillPoints, Trophies,TitaniumBolts]
+                        ExtraArmorUpgrade, SkillPoints, Trophies, TitaniumBolts, NanotechMilestones]
 }
 
 slot_data_options: list[str] = [
@@ -147,4 +158,5 @@ slot_data_options: list[str] = [
     "skill_points",
     "trophies",
     "titanium_bolts",
+    "nanotech_milestones",
 ]

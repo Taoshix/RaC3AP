@@ -209,8 +209,13 @@ def should_skip_location(key: str, options) -> bool:
             if simple_skill.lower() in key.lower():
                 return False
         return True
+    
         # Skip titanium bolt locations if titanium bolt option is disabled
     if "T-Bolt" in key and options.titanium_bolts.value == 0:
+        return True
+    
+        # Skip nanotech milestone locations if titanium bolt option is disabled
+    if "Nanotech Milestone" in key and options.nanotech_milestones.value == 0:
         return True
 
 

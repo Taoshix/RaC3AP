@@ -519,10 +519,11 @@ def set_rules_hard_location(world):
         "Infobot: Koros",
         "Infobot: Command Center"
     ]
-    for level in range(11, 101):
-        check = (level - 10) // 5
-        add_rule(world.get_location(f"Nanotech Milestone: {level}"),
-                 lambda state: state.has_from_list(*[planet_list], world.player, check))
+    if world.options.nanotech_milestones.value == 1:
+        for level in range(11, 101):
+            check = (level - 10) // 5
+            add_rule(world.get_location(f"Nanotech Milestone: {level}"),
+                     lambda state: state.has_from_list(*[planet_list], world.player, check))
 
 
 def set_rules(world: "RaC3World"):
