@@ -18,3 +18,6 @@ zip -r ./rac3-ap-poptracker{.zip,}
 mv rac3-ap-poptracker.zip $OUTPUT
 zip -r $OUTPUT{.zip,}
 
+rm -rf ./rac3/maps
+rm -rf ./rac3/images/
+rm -rf ./rac3/locations
