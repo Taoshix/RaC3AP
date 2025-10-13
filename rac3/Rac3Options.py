@@ -122,15 +122,18 @@ class TitaniumBolts(Choice):
 class NanotechMilestones(Choice):
     """
     Determines whether nanotech milestones are locations in the world.
-    Disabled: No nanotech milestones are locations.
-    Enabled: All nanotech milestones are locations.
+    None: No nanotech milestones are locations.
+    Every 5: Makes every 5 nanotech milestones locations starting from nanotech level 15.
+    Every 10: Makes every 10 nanotech milestones locations starting from nanotech level 20.
+    Every 20: Makes every 20 nanotech milestones locations starting from nanotech level 20.
+    All: All nanotech milestones are locations.
     """
     display_name = "Nanotech Milestones"
-    option_disabled = 0
+    option_none = 0
     option_every_5 = 1
     option_every_10 = 2
     option_every_20 = 3
-    option_enabled = 4
+    option_all = 4
     default = 0
 
 
