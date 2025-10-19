@@ -157,11 +157,13 @@ def set_rules_hard_location(world):
              lambda state: state.has_any(["Suck Cannon", "Progressive Suck Cannon"], world.player))
     add_rule(world.get_location("Annihilation: Chop Chop"),
              lambda state: state.has_any(["Disk-Blade Gun", "Progressive Disk-Blade Gun"], world.player))
-    add_rule(world.get_location("Annihilation: Sleep Inducer"),
+    add_rule(world.get_location("Annihilation: Sleep Inducer"), # you need to complete chop chop before you can do this mission
              lambda state: state.has_any(["Disk-Blade Gun", "Progressive Disk-Blade Gun"], world.player)
+                           and state.has_any(["Rift Inducer", "Progressive Rift Inducer"], world.player)) 
+    add_rule(world.get_location("Annihilation: The Other White Meat"), # you need to complete sleep inducer before you can do this mission
+             lambda state: state.has_any(["Qwack-O-Ray", "Progressive Qwack-O-Ray"], world.player)
+                           and state.has_any(["Disk-Blade Gun", "Progressive Disk-Blade Gun"], world.player)
                            and state.has_any(["Rift Inducer", "Progressive Rift Inducer"], world.player))
-    add_rule(world.get_location("Annihilation: The Other White Meat"),
-             lambda state: state.has_any(["Qwack-O-Ray", "Progressive Qwack-O-Ray"], world.player))
 
     # Maybe difficult and long(100 rounds ...), so it restrict after getting items for clear the game.
     add_rule(world.get_location("Annihilation: Qwarktastic Battle"),
