@@ -151,6 +151,11 @@ def set_rules_hard_location(world):
              lambda state: state.has_any(["Plasma Whip", "Progressive Plasma Whip"], world.player))
     add_rule(world.get_location("Annihilation: Hydra'n Seek"),
              lambda state: state.has_any(["Spitting Hydra", "Progressive Spitting Hydra"], world.player))
+    add_rule(world.get_location("Annihilation: Chop Chop"),
+             lambda state: state.has_any(["Disk-Blade Gun", "Progressive Disk-Blade Gun"], world.player))
+    add_rule(world.get_location("Annihilation: Sleep Inducer"),
+             lambda state: state.has_any(["Disk-Blade Gun", "Progressive Disk-Blade Gun"], world.player)
+                           and state.has_any(["Rift Inducer", "Progressive Rift Inducer"], world.player))
 
     # Second visit: Post-Dax(Meeting Courtney)
     add_rule(world.get_location("Annihilation: Time to Suck"),
