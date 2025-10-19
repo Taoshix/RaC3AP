@@ -149,8 +149,9 @@ def set_rules_hard_location(world):
     # First visit (when getting Tyhrra-Guise)
     add_rule(world.get_location("Annihilation: Whip it Good"),
              lambda state: state.has_any(["Plasma Whip", "Progressive Plasma Whip"], world.player))
-    add_rule(world.get_location("Annihilation: Hydra'n Seek"),
-             lambda state: state.has_any(["Spitting Hydra", "Progressive Spitting Hydra"], world.player))
+    add_rule(world.get_location("Annihilation: Hydra'n Seek"), # you need to complete whip it good before you can do this mission
+             lambda state: state.has_any(["Spitting Hydra", "Progressive Spitting Hydra"], world.player)
+                           and state.has_any(["Plasma Whip", "Progressive Plasma Whip"], world.player))
 
     # Second visit: Post-Dax(Meeting Courtney)
     add_rule(world.get_location("Annihilation: Time to Suck"),
