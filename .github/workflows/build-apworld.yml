@@ -113,6 +113,10 @@ jobs:
           This release was automatically generated from the **${branch}** branch.  
           Latest (main) releases is recommended as pre-releases (staging) contain experimental or in-progress changes that might be unstable.  
           ${changelog}
+
+          ### If a location is broken and does not get sent out
+          Go to the server console either locally if hosting locally or on the room's page on the archipelago website to force the location to get sent out:  
+          `/send_location <player_name> <location>` example `/send_location TaoshiRaC3 Crash Site: Infobot: Aridia`
           EOF
 
       - name: Create GitHub Release
