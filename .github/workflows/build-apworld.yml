@@ -111,7 +111,7 @@ jobs:
 
           ### Notes
           This release was automatically generated from the **${branch}** branch.  
-          Latest (main) releases is recomended as pre-releases (staging) contain experimental or in-progress changes.  
+          Latest (main) releases is recommended as pre-releases (staging) contain experimental or in-progress changes that might be unstable.  
           ${changelog}
           EOF
 
