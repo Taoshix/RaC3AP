@@ -327,8 +327,6 @@ def set_rules_hard_location(world):
     # ----- Simple Skill Points -----#
     if world.options.skill_points.value > 0:
         # Phoenix
-        add_rule(world.get_location("Phoenix: Skill Point: Monkeying Around"),
-                 lambda state: state.has("Tyhrra-Guise", world.player))
         add_rule(world.get_location("Phoenix: Skill Point: Beat Helga's Best VR Time"),
                  lambda state: state.can_reach("Tyhrranosis", player=world.player)
                                and state.has_all(["Hacker", "Hypershot"], player=world.player))
@@ -380,6 +378,8 @@ def set_rules_hard_location(world):
                  lambda state: state.has("Progressive VidComic", world.player, 4)),
         add_rule(world.get_location("Phoenix: Skill Point: The Shaming of the Q - set a new record for qwark"),
                  lambda state: state.has("Progressive VidComic", world.player, 5)),
+        add_rule(world.get_location("Phoenix: Skill Point: Monkeying Around"),
+                 lambda state: state.has("Tyhrra-Guise", world.player))
 
         # Aquatos
         add_rule(world.get_location("Aquatos: Skill Point: Hit the motherload"),
