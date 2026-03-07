@@ -1,3 +1,4 @@
+# [DEVELOPMENT HAS BEEN MOVED TO A NEW REPOSITORY](https://github.com/Taoshix/Archipelago-RaC3/)
 # Ratchet and Clank 3 Up your Arsenal (PS2)
 An Archipelago implementation for Ratchet & Clank 3
 
